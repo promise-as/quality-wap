@@ -1,7 +1,7 @@
 charset = 'UTF-8';
 $(function () {
   theaMsForm($('.sign-in'));
-  
+
   // 单选
   function radio(btn, classname) {
     $(btn).each(function () {
@@ -16,7 +16,7 @@ $(function () {
     console.log(111)
     var text = '';
     $('.authority .select .on').each(function () {
-        text += $(this).text() + '、'
+      text += $(this).text() + '、'
     });
     $('#select').val(text);
   });
@@ -27,4 +27,14 @@ $(function () {
       scrollTop: 0
     });
   });
+
+  var mySwiper = new Swiper('.swiper-container', {
+    slidesPerView: 2,
+    slidesPerGroup: 2,
+    spaceBetween: 20,
+    pagination: '.swiper-pagination',
+    prevButton: '.swiper-button-prev',
+    nextButton: '.swiper-button-next',
+  });
+
 });
